@@ -1,10 +1,10 @@
 FROM tomcat:9.0-jdk17
 
-# Remove default Tomcat applications
+# Remove default Tomcat apps
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-# Copy Angular WAR into Tomcat
-COPY angularcicd.war /usr/local/tomcat/webapps/angularcicd.war
+# Copy Angular dist output directly into ROOT app
+COPY dist/angularcicd/ /usr/local/tomcat/webapps/angularcicd/
 
 EXPOSE 4200
 

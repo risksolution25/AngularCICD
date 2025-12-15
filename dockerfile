@@ -6,6 +6,6 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 # Copy Angular WAR into Tomcat
 COPY angularcicd.war /usr/local/tomcat/webapps/angularcicd.war
 
-EXPOSE 8082
+EXPOSE 4200
 
 CMD ["catalina.sh", "run"]
